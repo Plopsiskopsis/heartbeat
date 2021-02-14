@@ -20,9 +20,6 @@ const FLY_ACCEL :float = 2.0
 
 var jump_height :float = 15.0
 
-func _ready():
-	Global.player = self
-
 func _physics_process(delta) -> void:
 	if flying:
 		fly(delta)
@@ -39,18 +36,6 @@ func _input(event) -> void:
 			camera_angle += change
 	if Input.is_action_just_pressed("ui_focus_next"):
 		flying = !flying
-	if Input.is_action_just_pressed("action"):
-		var ray_length :float = 100.0
-		var pos = get_viewport().get_mouse_position()
-		if pos:
-			var from :Vector3 = $head/Camera.project_ray_origin(pos)
-			var to :Vector3 = from + $head/Camera.project_ray_normal(pos) * ray_length
-			var space_state :PhysicsDirectSpaceState = get_world().get_direct_space_state()
-			if space_state:
-				var result :Dictionary = space_state.intersect_ray( from, to, [self], 0x7FFFFFFF, true, true)
-				if result:
-					if result.collider.is_in_group("action"):
-						result.collider.get_parent().action() 
 
 
 func walk(delta) -> void:

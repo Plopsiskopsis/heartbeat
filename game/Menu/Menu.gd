@@ -1,7 +1,6 @@
 extends Control
 
 func _ready() -> void:
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	randomize() # for getting random seed in game
 
 func _on_Start_button_pressed() -> void:
