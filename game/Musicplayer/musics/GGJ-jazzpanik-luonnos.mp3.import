@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/GGJ-jazzpanik-luonnos.mp3-fcb5e7f600821c6f8473ff3133e087eb.mp3str"
+
+[deps]
+
+source_file="res://Musicplayer/musics/GGJ-jazzpanik-luonnos.mp3"
+dest_files=[ "res://.import/GGJ-jazzpanik-luonnos.mp3-fcb5e7f600821c6f8473ff3133e087eb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
