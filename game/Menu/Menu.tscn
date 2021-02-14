@@ -1,5 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
+[ext_resource path="res://Menu/lataus.jpg" type="Texture" id=1]
+[ext_resource path="res://Menu/lataus (1).jpg" type="Texture" id=2]
 [ext_resource path="res://Menu/blue_button00.png" type="Texture" id=3]
 [ext_resource path="res://Menu/Menu.gd" type="Script" id=4]
 
@@ -77,6 +79,42 @@ tracks/5/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("CenterContainer/VBoxContainer/Start_button:rect_rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 180.0, 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("CenterContainer/VBoxContainer/Music_button:rect_rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 90.0, 0.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("CenterContainer/VBoxContainer/Quit_button:rect_rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -180.0, 0.0 ]
+}
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -89,11 +127,16 @@ __meta__ = {
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+texture = ExtResource( 1 )
 expand = true
 stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="es_jonne" type="Sprite" parent="Background"]
+position = Vector2( 629.684, 98.7342 )
+texture = ExtResource( 2 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
@@ -110,8 +153,10 @@ margin_bottom = 377.0
 
 [node name="Start_button" type="TextureButton" parent="CenterContainer/VBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
+margin_top = -300.0
 margin_right = 190.0
-margin_bottom = 49.0
+margin_bottom = -251.0
+rect_rotation = 180.0
 texture_normal = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -130,10 +175,12 @@ __meta__ = {
 }
 
 [node name="Music_button" type="TextureButton" parent="CenterContainer/VBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 1, 1, 1, 0.0129658 )
+margin_left = -641.572
 margin_top = 53.0
-margin_right = 190.0
+margin_right = -451.572
 margin_bottom = 102.0
+rect_rotation = 88.8331
 texture_normal = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Music_button"]
@@ -149,10 +196,11 @@ __meta__ = {
 }
 
 [node name="Quit_button" type="TextureButton" parent="CenterContainer/VBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_top = 106.0
+modulate = Color( 1, 1, 1, 0.0177063 )
+margin_top = 394.794
 margin_right = 190.0
-margin_bottom = 155.0
+margin_bottom = 443.795
+rect_rotation = -176.813
 texture_normal = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Quit_button"]
