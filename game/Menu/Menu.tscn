@@ -153,10 +153,8 @@ margin_bottom = 377.0
 
 [node name="Start_button" type="TextureButton" parent="CenterContainer/VBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = -300.0
 margin_right = 190.0
-margin_bottom = -251.0
-rect_rotation = 180.0
+margin_bottom = 49.0
 texture_normal = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -176,11 +174,9 @@ __meta__ = {
 
 [node name="Music_button" type="TextureButton" parent="CenterContainer/VBoxContainer"]
 modulate = Color( 1, 1, 1, 0.0129658 )
-margin_left = -641.572
 margin_top = 53.0
-margin_right = -451.572
+margin_right = 190.0
 margin_bottom = 102.0
-rect_rotation = 88.8331
 texture_normal = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Music_button"]
@@ -197,10 +193,9 @@ __meta__ = {
 
 [node name="Quit_button" type="TextureButton" parent="CenterContainer/VBoxContainer"]
 modulate = Color( 1, 1, 1, 0.0177063 )
-margin_top = 394.794
+margin_top = 106.0
 margin_right = 190.0
-margin_bottom = 443.795
-rect_rotation = -176.813
+margin_bottom = 155.0
 texture_normal = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Quit_button"]
