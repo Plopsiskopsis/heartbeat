@@ -12,6 +12,6 @@ func _on_Area_body_exited(body) -> void:
 
 func action() -> void:
 	if can_start:
-		print("start")
+		get_tree().change_scene_to(load("res://2D_minigame/Minigame.tscn"))
 	else:
 		print("no start")
