@@ -4,7 +4,7 @@ extends Node2D
 onready var label = $Label
 onready var progress_bar = $ProgressBar
 onready var buffer_timer = $Timer
-var possible_inputs = ["W", "A", "S", "D"]
+var possible_inputs = ["Up", "Left", "Down", "Right"]
 var correct_answer
 var score = 0
 export var max_score = 20
@@ -15,20 +15,26 @@ func _ready():
 	progress_bar.max_value = max_score
 
 
-func _input(event):
-	if event is InputEventKey:
-		print(event.as_text())
-		if event.as_text() == correct_answer:
-			correct_answer()
-			yield(buffer_timer,"timeout")
-		else:
-			print("Väärin!")
-			score -= 1
-			buffer_timer.start()
-			yield(buffer_timer,"timeout")
+func _unhandled_key_input(event):
+	if Input.is_action_just_pressed("ui_up"):
+		check_answer("Up")
+	if Input.is_action_just_pressed("ui_down"):
+		check_answer("Down")
+	if Input.is_action_just_pressed("ui_left"):
+		check_answer("Left")
+	if Input.is_action_just_pressed("ui_right"):
+		check_answer("Right")
 
 
-func correct_answer():
+func check_answer(input):
+	if input == correct_answer:
+		answer_was_correct()
+	else:
+		print("Väärin!")
+		score -= 1
+		progress_bar.value = score
+
+func answer_was_correct():
 	print("Oikein!")
 	score += 1
 	progress_bar.value = score
@@ -36,7 +42,6 @@ func correct_answer():
 		win()
 	else:
 		new_answer()
-		buffer_timer.start()
 
 
 func new_answer():
