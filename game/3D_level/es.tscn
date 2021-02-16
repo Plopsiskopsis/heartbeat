@@ -3,3 +3,4 @@
 [ext_resource path="res://3D_level/es.gltf" type="PackedScene" id=1]
 
 [node name="es" instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )

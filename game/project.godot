@@ -12,7 +12,7 @@ config_version=4
 
 config/name="heartbeat"
 run/main_scene="res://Menu/Menu.tscn"
-config/icon="res://icon.png"
+config/icon="res://UI/heart.png"
 
 [autoload]
 
@@ -77,6 +77,11 @@ move_sprint={
 jump={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+}
+action={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
  ]
 }
 
