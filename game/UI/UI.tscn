@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://UI/Heart.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/UI.gd" type="Script" id=2]
+[ext_resource path="res://UI/ui_es.png" type="Texture" id=3]
 
 [node name="UI" type="Control"]
 anchor_right = 1.0
@@ -12,6 +13,7 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 margin_left = 904.0
 margin_top = 18.0
 margin_right = 981.0
@@ -30,6 +32,22 @@ margin_top = -10.0104
 margin_right = 53.6465
 margin_bottom = 7.98959
 text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ui_es" type="Sprite" parent="."]
+position = Vector2( 35.4236, 48.4809 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="ui_es"]
+margin_left = 66.7975
+margin_top = -59.8569
+margin_right = 106.798
+margin_bottom = -45.8569
+rect_scale = Vector2( 10, 10 )
+text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
