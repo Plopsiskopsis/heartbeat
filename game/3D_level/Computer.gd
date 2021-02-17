@@ -5,10 +5,11 @@ var comp_started :bool = false
 
 # warning-ignore:unused_argument
 func _input(event):
-	if comp_started && Input.is_action_just_pressed("action"):
+	if comp_started && Input.is_action_just_pressed("leave_comp"):
 		if $Timer.time_left > 0.0:
 			return
 		Global.player.set_cam()
+		Global.player.on_computer = false
 		comp_started = false
 		$Comp_screen/Viewport/Minigame.running = false
 
@@ -26,6 +27,7 @@ func action() -> void:
 	if can_start && !comp_started:
 		get_parent().get_node("Comp_cam_pos").current = true
 		comp_started = true
+		Global.player.on_computer = true
 		$Comp_screen/Viewport/Minigame.running = true
 	else:
 		print("too far")

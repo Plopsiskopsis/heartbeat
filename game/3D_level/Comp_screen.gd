@@ -10,5 +10,5 @@ func _ready() -> void:
 
 	material_override.albedo_texture = viewport.get_texture()
 
-func _input(event):
+func _input(event) -> void:
 	$Viewport.input(event)
