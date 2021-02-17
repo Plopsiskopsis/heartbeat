@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://3D_level/Player.gd" type="Script" id=1]
 [ext_resource path="res://3D_level/objektit/es.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/UI.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -65,3 +66,11 @@ visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/drink = SubResource( 2 )
+
+[node name="UI" parent="." instance=ExtResource( 3 )]
+
+[node name="heart_timer" type="Timer" parent="."]
+wait_time = 0.75
+autostart = true
+
+[connection signal="timeout" from="heart_timer" to="." method="_on_heart_timer_timeout"]

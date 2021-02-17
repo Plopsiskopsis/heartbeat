@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/Heart.tscn" type="PackedScene" id=1]
+[ext_resource path="res://UI/UI.gd" type="Script" id=2]
+
+[node name="UI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 904.0
+margin_top = 18.0
+margin_right = 981.0
+margin_bottom = 82.0
+color = Color( 0.741176, 0.160784, 0.160784, 0.6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Heart" parent="." instance=ExtResource( 1 )]
+position = Vector2( 923.685, 51.4256 )
+
+[node name="Label" type="Label" parent="Heart"]
+margin_left = 23.6465
+margin_top = -10.0104
+margin_right = 53.6465
+margin_bottom = 7.98959
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}

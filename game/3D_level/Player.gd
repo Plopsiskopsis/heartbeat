@@ -10,6 +10,7 @@ var asekohta :Vector3 = Vector3(0,0.3,-0.7)
 var gravity :float = -9.8 * 3
 var flying :bool = false
 var es_drinks : int = 0
+var bpm :float = 80.0
 
 const MAX_SPEED :float = 20.0
 const MAX_RUNNING_SPEED :float = 30.0
@@ -21,8 +22,13 @@ const FLY_ACCEL :float = 2.0
 
 var jump_height :float = 15.0
 
+func _process(delta):
+	$UI
+
 func _ready():
 	Global.player = self
+	$UI.heartbeat()
+	$heart_timer.wait_time = 60.0 / bpm
 
 func _physics_process(delta) -> void:
 	if flying:
@@ -31,7 +37,7 @@ func _physics_process(delta) -> void:
 		walk(delta)
 	
 
-func check_drinks():
+func check_drinks() -> void:
 	if es_drinks >= 0:
 		$head/Camera/es.visible = false
 
@@ -40,6 +46,8 @@ func _input(event) -> void:
 		if es_drinks > 0:
 			es_drinks -= 1
 			$AnimationPlayer.play("drink")
+			bpm += 10
+			$heart_timer.wait_time = 60.0 / bpm
 	
 	if event is InputEventMouseMotion:
 		rotate_y(deg2rad(-event.relative.x * mouse_sensitivity))
@@ -121,3 +129,6 @@ func fly(delta) -> void:
 # warning-ignore:return_value_discarded
 	move_and_slide(velocity)
 
+
+func _on_heart_timer_timeout() -> void:
+	$UI.heartbeat()
