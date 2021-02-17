@@ -1,6 +1,15 @@
 extends Spatial
 
 var can_start :bool = false
+var comp_started :bool = false
+
+# warning-ignore:unused_argument
+func _input(event):
+	if comp_started && Input.is_action_just_pressed("action"):
+		if $Timer.time_left > 0.0:
+			return
+		Global.player.set_cam()
+		comp_started = false
 
 func _on_Area_body_entered(body) -> void:
 	if body == Global.player:
@@ -11,8 +20,10 @@ func _on_Area_body_exited(body) -> void:
 		can_start = false
 
 func action() -> void:
-	if can_start:
-		#get_tree().change_scene_to(load("res://2D_minigame/Minigame.tscn"))
+	if $Timer.time_left > 0.0:
+		return
+	if can_start && !comp_started:
 		get_parent().get_node("Comp_cam_pos").current = true
+		comp_started = true
 	else:
 		print("too far")

@@ -348,5 +348,9 @@ material = SubResource( 6 )
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 7 )
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
