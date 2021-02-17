@@ -79,7 +79,6 @@ func _input(event) -> void:
 					if result.collider.is_in_group("action"):
 						result.collider.get_parent().action() 
 						if result.collider.is_in_group("es"):
-							es_drinks += 1
 							$UI.es_count(es_drinks)
 							if es_drinks > 0:
 								$head/Camera/es.visible = true

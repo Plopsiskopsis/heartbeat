@@ -10,6 +10,7 @@ func _input(event):
 			return
 		Global.player.set_cam()
 		comp_started = false
+		$Comp_screen/Viewport/Minigame.running = false
 
 func _on_Area_body_entered(body) -> void:
 	if body == Global.player:
@@ -25,5 +26,6 @@ func action() -> void:
 	if can_start && !comp_started:
 		get_parent().get_node("Comp_cam_pos").current = true
 		comp_started = true
+		$Comp_screen/Viewport/Minigame.running = true
 	else:
 		print("too far")

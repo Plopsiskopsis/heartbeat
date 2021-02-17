@@ -8,6 +8,7 @@ var possible_inputs :Array = ["Up", "Left", "Down", "Right"]
 var correct_answer :String
 var score :int = 0
 export var max_score :int = 20
+var running :bool = false
 
 
 func _ready() -> void:
@@ -17,14 +18,15 @@ func _ready() -> void:
 
 # warning-ignore:unused_argument
 func _input(event) -> void:
-	if Input.is_action_just_pressed("ui_up"):
-		check_answer("Up")
-	if Input.is_action_just_pressed("ui_down"):
-		check_answer("Down")
-	if Input.is_action_just_pressed("ui_left"):
-		check_answer("Left")
-	if Input.is_action_just_pressed("ui_right"):
-		check_answer("Right")
+	if running:
+		if Input.is_action_just_pressed("ui_up"):
+			check_answer("Up")
+		if Input.is_action_just_pressed("ui_down"):
+			check_answer("Down")
+		if Input.is_action_just_pressed("ui_left"):
+			check_answer("Left")
+		if Input.is_action_just_pressed("ui_right"):
+			check_answer("Right")
 
 
 func check_answer(input) -> void:
