@@ -15,7 +15,7 @@ func _ready():
 	progress_bar.max_value = max_score
 
 
-func _unhandled_key_input(event):
+func _input(event):
 	if Input.is_action_just_pressed("ui_up"):
 		check_answer("Up")
 	if Input.is_action_just_pressed("ui_down"):

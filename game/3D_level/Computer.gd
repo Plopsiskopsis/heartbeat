@@ -12,6 +12,7 @@ func _on_Area_body_exited(body) -> void:
 
 func action() -> void:
 	if can_start:
-		get_tree().change_scene_to(load("res://2D_minigame/Minigame.tscn"))
+		#get_tree().change_scene_to(load("res://2D_minigame/Minigame.tscn"))
+		get_parent().get_node("Comp_cam_pos").current = true
 	else:
-		print("no start")
+		print("too far")

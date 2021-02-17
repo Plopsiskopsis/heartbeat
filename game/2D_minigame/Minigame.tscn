@@ -1,6 +1,25 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://2D_minigame/Minigame.gd" type="Script" id=1]
+[ext_resource path="res://UI/Heart.tscn" type="PackedScene" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "New Anim"
+loop = true
+tracks/0/type = "method"
+tracks/0/path = NodePath("Heart")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "beat"
+} ]
+}
 
 [node name="Minigame" type="Node2D"]
 script = ExtResource( 1 )
@@ -30,3 +49,10 @@ __meta__ = {
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="Heart" parent="." instance=ExtResource( 2 )]
+position = Vector2( 235.201, 163.157 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 1 )

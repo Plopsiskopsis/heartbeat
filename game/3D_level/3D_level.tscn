@@ -4,7 +4,7 @@
 [ext_resource path="res://3D_level/Computer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://3D_level/Table.tscn" type="PackedScene" id=3]
 [ext_resource path="res://3D_level/3D_level.gd" type="Script" id=4]
-[ext_resource path="res://3D_level/es.tscn" type="PackedScene" id=5]
+[ext_resource path="res://3D_level/objektit/es.tscn" type="PackedScene" id=5]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.623529, 0.392157, 0.392157, 1 )
@@ -38,3 +38,7 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 1, -
 
 [node name="es" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.971517, 1.80466, -3.6697 )
+
+[node name="Comp_cam_pos" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 2.3, -3.5 )
+projection = 1
