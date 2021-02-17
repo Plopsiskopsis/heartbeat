@@ -20,7 +20,7 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7, 2.18903, -2.34982 )
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -7, 1, -1.42952 )
 
 [node name="es" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.60333, 1.80466, -1.22757 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.08196, 2.07364, -1.66814 )
 
 [node name="Comp_cam_pos" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -7, 2.3, -1.5 )
