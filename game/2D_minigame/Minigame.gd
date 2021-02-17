@@ -7,7 +7,7 @@ onready var buffer_timer :Object = $Timer
 var possible_inputs :Array = ["Up", "Left", "Down", "Right"]
 var correct_answer :String
 var score :int = 0
-export var max_score :int = 20
+export var max_score :int = 200
 var running :bool = false
 
 
@@ -15,6 +15,8 @@ func _ready() -> void:
 	new_answer()
 	progress_bar.max_value = max_score
 
+func _process(delta) -> void:
+	label.rect_scale = Vector2(Global.player.bpm_offset, Global.player.bpm_offset)
 
 # warning-ignore:unused_argument
 func _input(event) -> void:
@@ -33,12 +35,10 @@ func check_answer(input) -> void:
 	if input == correct_answer:
 		answer_was_correct()
 	else:
-		print("Väärin!")
 		score -= 1
 		progress_bar.value = score
 
 func answer_was_correct() -> void:
-	print("Oikein!")
 	score += 1
 	progress_bar.value = score
 	if score >= max_score:
@@ -52,7 +52,6 @@ func new_answer() -> void:
 	possible_inputs.shuffle()
 	correct_answer = possible_inputs.front()
 	label.text = correct_answer
-
 
 func win() -> void:
 	#TODO: tähä sit jotai lol

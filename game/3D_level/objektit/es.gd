@@ -13,4 +13,5 @@ func _on_Area_body_exited(body) -> void:
 func action() -> void:
 	if can_grab:
 		Global.player.es_drinks += 1
+		can_grab = false
 		queue_free()
