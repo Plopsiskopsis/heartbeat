@@ -88,7 +88,7 @@ height = 24.0
 depth = 18.0
 
 [node name="Room_Platform2" type="CSGBox" parent="House_Rooms"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.5, 11, 26.5 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.5, 11, 9.5 )
 invert_faces = true
 width = 6.0
 height = 6.0
@@ -103,10 +103,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.64823, 0.759179, 8.62285 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6232, 14.3087, -1.88085 )
 
 [node name="ES_Spawn3" type="Position3D" parent="House_ES_Spawpoints"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15222, 2.98443, 17.013 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52614, 2.9674, 21.5786 )
 
 [node name="ES_Spawn4" type="Position3D" parent="House_ES_Spawpoints"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.46408, 8.88213, 22.9457 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.13554, 8.27024, 12.9457 )
+
+[node name="ES_Spawn5" type="Position3D" parent="House_ES_Spawpoints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9274, -4.01787, 19.9457 )
 
 [node name="House_Lights" type="Spatial" parent="."]
 
@@ -130,21 +133,48 @@ width = 14.0
 height = 6.0
 depth = 6.0
 
+[node name="CSGBox5" type="CSGBox" parent="House_Props"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 3.5, 12.5 )
+width = 4.0
+height = 3.0
+depth = 6.0
+
 [node name="CSGBox2" type="CSGBox" parent="House_Props"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.5, -2, 19.5 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 13, -0.5, 20 )
 use_collision = true
 width = 10.0
-height = 5.0
-depth = 4.0
-
-[node name="CSGBox4" type="CSGBox" parent="House_Props"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.5, 2, 23.5 )
-use_collision = true
-height = 12.0
 depth = 4.0
 
 [node name="CSGBox3" type="CSGBox" parent="House_Props"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.5, -4, 12.5 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11, -4.5, 12 )
 use_collision = true
-width = 4.0
+width = 6.0
+height = 4.0
+depth = 6.0
+
+[node name="CSGBox4" type="CSGBox" parent="House_Props"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, 5, 12.5 )
+use_collision = true
+width = 5.0
+height = 6.0
 depth = 4.0
+
+[node name="CSGPolygon" type="CSGPolygon" parent="House_Props"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, -1.5, 15 )
+polygon = PoolVector2Array( -2, -1, 2, 2, 2, 2, 2, -1 )
+depth = 4.543
+
+[node name="CSGPolygon3" type="CSGPolygon" parent="House_Props"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11, -3.5, 16 )
+polygon = PoolVector2Array( -3, -2, 1, 1, 1, 1, 1, -2 )
+depth = 3.0
+
+[node name="CSGPolygon4" type="CSGPolygon" parent="House_Props"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 7, 14 )
+polygon = PoolVector2Array( -3, -2, 0, 1, 1, 1, 1, -2 )
+depth = 3.0
+
+[node name="CSGPolygon5" type="CSGPolygon" parent="House_Props"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.5, 3.015, 16 )
+polygon = PoolVector2Array( -3, -1, 1, 2, 2, 2, 2, -1 )
+depth = 6.0
