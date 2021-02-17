@@ -1,0 +1,150 @@
+[gd_scene format=2]
+
+[node name="House" type="Spatial"]
+
+[node name="House_Rooms" type="CSGCombiner" parent="."]
+use_collision = true
+
+[node name="Room_Computer" type="CSGBox" parent="House_Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.02058, 3, -2.81803 )
+use_collision = true
+invert_faces = true
+width = 10.0
+height = 5.0
+depth = 8.0
+
+[node name="Room_Living" type="CSGBox" parent="House_Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.97942, 3, -1.81803 )
+use_collision = true
+invert_faces = true
+width = 10.0
+height = 5.0
+depth = 6.0
+
+[node name="Room_Living2" type="CSGBox" parent="House_Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9794, 13, -1.81803 )
+use_collision = true
+invert_faces = true
+width = 4.0
+height = 16.0
+depth = 4.0
+
+[node name="Room_Living3" type="CSGBox" parent="House_Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9794, 17, -1.81803 )
+use_collision = true
+invert_faces = true
+height = 6.0
+depth = 4.0
+
+[node name="Connector" type="CSGBox" parent="House_Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3, 2 )
+use_collision = true
+invert_faces = true
+width = 4.0
+height = 5.0
+
+[node name="Connector3" type="CSGBox" parent="House_Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 3, 2 )
+use_collision = true
+invert_faces = true
+width = 4.0
+height = 5.0
+
+[node name="Connector2" type="CSGBox" parent="House_Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3, 6 )
+use_collision = true
+invert_faces = true
+width = 4.0
+height = 5.0
+
+[node name="Room_Corridor" type="CSGBox" parent="House_Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, 4 )
+use_collision = true
+invert_faces = true
+width = 34.0
+height = 5.0
+depth = 4.0
+
+[node name="Room_Corridor2" type="CSGBox" parent="House_Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 3, 15 )
+use_collision = true
+invert_faces = true
+width = 4.0
+height = 5.0
+depth = 20.0
+
+[node name="Room_Bed" type="CSGBox" parent="House_Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3, 11 )
+invert_faces = true
+width = 10.0
+height = 5.0
+depth = 8.0
+
+[node name="Room_Platform1" type="CSGBox" parent="House_Rooms"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5, 7, 17.5 )
+invert_faces = true
+width = 14.0
+height = 24.0
+depth = 18.0
+
+[node name="Room_Platform2" type="CSGBox" parent="House_Rooms"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.5, 11, 26.5 )
+invert_faces = true
+width = 6.0
+height = 6.0
+depth = 6.0
+
+[node name="House_ES_Spawpoints" type="Spatial" parent="."]
+
+[node name="ES_Spawn1" type="Position3D" parent="House_ES_Spawpoints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.64823, 0.759179, 8.62285 )
+
+[node name="ES_Spawn2" type="Position3D" parent="House_ES_Spawpoints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6232, 14.3087, -1.88085 )
+
+[node name="ES_Spawn3" type="Position3D" parent="House_ES_Spawpoints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15222, 2.98443, 17.013 )
+
+[node name="ES_Spawn4" type="Position3D" parent="House_ES_Spawpoints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.46408, 8.88213, 22.9457 )
+
+[node name="House_Lights" type="Spatial" parent="."]
+
+[node name="House_Props" type="CSGCombiner" parent="."]
+use_collision = true
+
+[node name="Bed" type="CSGBox" parent="House_Props"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.62467, 1.13777, 11.6688 )
+height = 1.22406
+depth = 5.46766
+
+[node name="Table" type="CSGBox" parent="House_Props"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3753, 5.13777, 18.6688 )
+visible = false
+width = 4.0
+height = 1.22406
+
+[node name="CSGBox" type="CSGBox" parent="House_Props"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, -1, 17.5 )
+width = 14.0
+height = 6.0
+depth = 6.0
+
+[node name="CSGBox2" type="CSGBox" parent="House_Props"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.5, -2, 19.5 )
+use_collision = true
+width = 10.0
+height = 5.0
+depth = 4.0
+
+[node name="CSGBox4" type="CSGBox" parent="House_Props"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.5, 2, 23.5 )
+use_collision = true
+height = 12.0
+depth = 4.0
+
+[node name="CSGBox3" type="CSGBox" parent="House_Props"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.5, -4, 12.5 )
+use_collision = true
+width = 4.0
+depth = 4.0
