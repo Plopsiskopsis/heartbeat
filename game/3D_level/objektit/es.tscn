@@ -57,6 +57,7 @@ material/0 = null
 
 [node name="Area" type="Area" parent="." groups=[
 "action",
+"es",
 ]]
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]

@@ -9,6 +9,7 @@ var direction :Vector3 = Vector3()
 var asekohta :Vector3 = Vector3(0,0.3,-0.7)
 var gravity :float = -9.8 * 3
 var flying :bool = false
+var es_drinks : int = 0
 
 const MAX_SPEED :float = 20.0
 const MAX_RUNNING_SPEED :float = 30.0
@@ -30,15 +31,26 @@ func _physics_process(delta) -> void:
 		walk(delta)
 	
 
+func check_drinks():
+	if es_drinks >= 0:
+		$head/Camera/es.visible = false
+
 func _input(event) -> void:
+	if Input.is_action_just_pressed("drink"):
+		if es_drinks > 0:
+			es_drinks -= 1
+			$AnimationPlayer.play("drink")
+	
 	if event is InputEventMouseMotion:
 		rotate_y(deg2rad(-event.relative.x * mouse_sensitivity))
 		var change :float = -event.relative.y * mouse_sensitivity
 		if change + camera_angle < 90 and change + camera_angle > -90:
 			cam.rotate_x(deg2rad(change))
 			camera_angle += change
+	
 	if Input.is_action_just_pressed("ui_focus_next"):
 		flying = !flying
+	
 	if Input.is_action_just_pressed("action"):
 		var ray_length :float = 100.0
 		var pos = get_viewport().get_mouse_position()
@@ -51,6 +63,10 @@ func _input(event) -> void:
 				if result:
 					if result.collider.is_in_group("action"):
 						result.collider.get_parent().action() 
+						if result.collider.is_in_group("es"):
+							es_drinks += 1
+							if es_drinks > 0:
+								$head/Camera/es.visible = true
 					
 
 
