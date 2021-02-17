@@ -9,7 +9,10 @@ var direction :Vector3 = Vector3()
 var asekohta :Vector3 = Vector3(0,0.3,-0.7)
 var gravity :float = -9.8 * 3
 var es_drinks : int = 0
-var bpm :float = 80.0
+var bpm :float = 100.0
+var bpm_offset :float = 1.0
+
+const BPM_OFFSET_MULTIPLIER = 2.0
 
 const MAX_SPEED :float = 20.0
 const MAX_RUNNING_SPEED :float = 30.0
@@ -24,7 +27,12 @@ func _ready() -> void:
 	$heart_timer.wait_time = 60.0 / bpm
 
 func _physics_process(delta) -> void:
-		walk(delta)
+	bpm_offset = bpm / 100.0
+	if bpm_offset > 0.0:
+		bpm_offset * BPM_OFFSET_MULTIPLIER
+	else:
+		bpm_offset / BPM_OFFSET_MULTIPLIER
+	walk(delta)
 
 func _process(delta):
 	bpm -= delta
@@ -52,7 +60,7 @@ func _input(event) -> void:
 		rotate_y(deg2rad(-event.relative.x * mouse_sensitivity))
 		var change :float = -event.relative.y * mouse_sensitivity
 		if change + camera_angle < 90 and change + camera_angle > -90:
-			cam.rotate_x(deg2rad(change))
+			cam.rotate_x(deg2rad(change) * bpm_offset)
 			camera_angle += change
 	
 	
@@ -105,10 +113,10 @@ func walk(delta) -> void:
 	temp_velocity = temp_velocity.linear_interpolate(target,acceleration * delta)
 	velocity.x = temp_velocity.x
 	velocity.z = temp_velocity.z
-	velocity = move_and_slide(velocity,Vector3(0,1,0))
+	velocity = move_and_slide(velocity,Vector3(0,1,0) * bpm_offset)
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
-			velocity.y = jump_height
+			velocity.y = jump_height * bpm_offset
 
 
 func _on_heart_timer_timeout() -> void:
