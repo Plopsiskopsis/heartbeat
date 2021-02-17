@@ -35,6 +35,7 @@ func _physics_process(delta) -> void:
 	walk(delta)
 
 func _process(delta):
+	$Spookies.material.set_shader_param("strength", ((bpm -100.0) / 100.0) * 2.0)
 	bpm -= delta
 	if bpm < 50.0 or bpm > 200.0:
 		print("You dead")
@@ -52,6 +53,7 @@ func _input(event) -> void:
 		if es_drinks > 0:
 			es_drinks -= 1
 			$UI.es_count(es_drinks)
+			$UI.drink()
 			$AnimationPlayer.play("drink")
 			bpm += 10
 			$heart_timer.wait_time = 60.0 / bpm

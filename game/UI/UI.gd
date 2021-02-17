@@ -6,3 +6,6 @@ func es_count(count):
 func heartbeat() -> void:
 	$Heart.beat()
 	$Heart/Label.text = str(Global.player.bpm) 
+
+func drink():
+	$Heart/Particles2D.emitting = true
