@@ -23,7 +23,7 @@ albedo_color = Color( 0.607843, 0.607843, 0.607843, 1 )
 albedo_color = Color( 0.607843, 0.607843, 0.607843, 1 )
 
 [sub_resource type="CylinderShape" id=7]
-radius = 4.0
+radius = 3.0
 
 [node name="Computer" type="Spatial"]
 script = ExtResource( 2 )

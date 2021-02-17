@@ -15,6 +15,7 @@ func _ready():
 	progress_bar.max_value = max_score
 
 
+# warning-ignore:unused_argument
 func _input(event):
 	if Input.is_action_just_pressed("ui_up"):
 		check_answer("Up")
