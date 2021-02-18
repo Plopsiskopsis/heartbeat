@@ -15,6 +15,7 @@ func _ready() -> void:
 	new_answer()
 	progress_bar.max_value = max_score
 
+# warning-ignore:unused_argument
 func _process(delta) -> void:
 	label.rect_scale = Vector2(Global.player.bpm_offset, Global.player.bpm_offset)
 
