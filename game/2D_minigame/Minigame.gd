@@ -4,6 +4,7 @@ extends Node2D
 onready var label :Object = $Label
 onready var progress_bar :Object = $ProgressBar
 onready var buffer_timer :Object = $Timer
+onready var anim :Object = $AnimationPlayer
 var possible_inputs :Array = ["Up", "Left", "Down", "Right"]
 var correct_answer :String
 var score :int = 0
@@ -15,6 +16,7 @@ func _ready() -> void:
 	new_answer()
 	progress_bar.max_value = max_score
 
+# warning-ignore:unused_argument
 func _process(delta) -> void:
 	label.rect_scale = Vector2(Global.player.bpm_offset, Global.player.bpm_offset)
 
@@ -33,8 +35,10 @@ func _input(event) -> void:
 
 func check_answer(input) -> void:
 	if input == correct_answer:
+		anim.play("right")
 		answer_was_correct()
 	else:
+		anim.play("wrong")
 		score -= 1
 		progress_bar.value = score
 
