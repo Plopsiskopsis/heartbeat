@@ -76,14 +76,14 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 471.784
-margin_top = 236.192
-margin_right = 542.784
-margin_bottom = 304.192
+margin_left = 490.0
+margin_top = 235.248
+margin_right = 561.0
+margin_bottom = 303.248
+grow_horizontal = 2
+grow_vertical = 2
 custom_fonts/font = ExtResource( 2 )
 text = "a"
-align = 1
-valign = 1
 uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -109,6 +109,7 @@ anims/start = SubResource( 2 )
 anims/wrong = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 scale = Vector2( 16, 9.4 )
 texture = ExtResource( 3 )
 centered = false
