@@ -65,7 +65,7 @@ func _input(event) -> void:
 		if event is InputEventMouseMotion:
 			rotate_y(deg2rad(-event.relative.x * mouse_sensitivity))
 			var change :float = -event.relative.y * mouse_sensitivity
-			if change + camera_angle < 140 and change + camera_angle > -140:
+			if change + camera_angle < 170 and change + camera_angle > -170:
 				cam.rotate_x(deg2rad(change) * bpm_offset)
 				camera_angle += change
 		

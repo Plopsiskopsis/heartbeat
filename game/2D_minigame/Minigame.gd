@@ -18,7 +18,7 @@ func _ready() -> void:
 
 # warning-ignore:unused_argument
 func _process(delta) -> void:
-	label.rect_scale = Vector2(Global.player.bpm_offset, Global.player.bpm_offset)
+	label.rect_scale = Vector2((Global.player.bpm / 100.0) * Global.player.BPM_OFFSET_MULTIPLIER, (Global.player.bpm / 100.0) * Global.player.BPM_OFFSET_MULTIPLIER)
 
 # warning-ignore:unused_argument
 func _input(event) -> void:

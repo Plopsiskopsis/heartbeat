@@ -13,3 +13,7 @@ func spawn_es() -> void:
 	var es :Object = es_scn.instance()
 	es.translation = pos
 	add_child(es)
+
+
+func _on_Timer_timeout():
+	spawn_es()
