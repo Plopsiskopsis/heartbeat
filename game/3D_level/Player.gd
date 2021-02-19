@@ -50,11 +50,11 @@ func set_cam() -> void:
 	check_drinks()
 
 func check_drinks() -> void:
-	if es_drinks <= 0:
+	if es_drinks < 0:
 		$head/Camera/es.visible = false
 
 func _input(event) -> void:
-	if Input.is_action_just_pressed("drink"):
+	if Input.is_action_just_pressed("drink") && !$AnimationPlayer.is_playing():
 		if es_drinks > 0:
 			es_drinks -= 1
 			$UI.es_count(es_drinks)
