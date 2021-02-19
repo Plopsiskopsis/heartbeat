@@ -19,7 +19,7 @@ const MAX_RUNNING_SPEED :float = 30.0
 const ACCEL :float = 2.0
 const DEACCEL :float = 6.0
 
-var jump_height :float = 15.0
+var jump_height :float = 50.0
 var on_computer :bool = false
 
 func _ready() -> void:
@@ -29,7 +29,7 @@ func _ready() -> void:
 
 func _physics_process(delta) -> void:
 	bpm_offset = bpm / 100.0
-	if bpm_offset > 0.0:
+	if bpm_offset > 1.0:
 		bpm_offset *= BPM_OFFSET_MULTIPLIER
 	else:
 		bpm_offset /= BPM_OFFSET_MULTIPLIER
