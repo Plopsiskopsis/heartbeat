@@ -32,7 +32,7 @@ projection = 1
 [node name="House" parent="." instance=ExtResource( 6 )]
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 40.0
+wait_time = 10.0
 autostart = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
