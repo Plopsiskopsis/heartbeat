@@ -6,7 +6,6 @@ var mouse_sensitivity :float = 0.3
 
 var velocity :Vector3 = Vector3()
 var direction :Vector3 = Vector3()
-var asekohta :Vector3 = Vector3(0,0.3,-0.7)
 var gravity :float = -9.8 * 3
 var es_drinks : int = 0
 var bpm :float = 100.0
@@ -66,7 +65,7 @@ func _input(event) -> void:
 		if event is InputEventMouseMotion:
 			rotate_y(deg2rad(-event.relative.x * mouse_sensitivity))
 			var change :float = -event.relative.y * mouse_sensitivity
-			if change + camera_angle < 90 and change + camera_angle > -90:
+			if change + camera_angle < 140 and change + camera_angle > -140:
 				cam.rotate_x(deg2rad(change) * bpm_offset)
 				camera_angle += change
 		
