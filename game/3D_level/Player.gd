@@ -7,7 +7,7 @@ var mouse_sensitivity :float = 0.3
 var velocity :Vector3 = Vector3()
 var direction :Vector3 = Vector3()
 var gravity :float = -9.8 * 3
-var es_drinks : int = 0
+var es_drinks : int = 6
 var bpm :float = 100.0
 var bpm_offset :float = 1.0
 
@@ -22,6 +22,7 @@ var jump_height :float = 50.0
 var on_computer :bool = false
 
 func _ready() -> void:
+	$UI.es_count(es_drinks)
 	Global.player = self
 	$UI.heartbeat()
 	$heart_timer.wait_time = 60.0 / bpm

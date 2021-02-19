@@ -32,7 +32,7 @@ __meta__ = {
 
 [node name="es_render" type="Sprite" parent="."]
 position = Vector2( 259.117, 293.458 )
-rotation = -6.09808
+rotation = -2.98185
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
 
