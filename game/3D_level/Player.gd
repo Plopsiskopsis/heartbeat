@@ -41,7 +41,6 @@ func _process(delta):
 	$Spookies.material.set_shader_param("strength", ((bpm -100.0) / 100.0) * 2.0)
 	bpm -= delta
 	if bpm < 50.0 or bpm > 200.0:
-		print("You dead")
 # warning-ignore:return_value_discarded
 		get_tree().change_scene_to(load("res://Menu/Lose_screen.tscn"))
 

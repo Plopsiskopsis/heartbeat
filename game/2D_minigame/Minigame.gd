@@ -10,7 +10,11 @@ var correct_answer :String
 var score :int = 0
 export var max_score :int = 200
 var running :bool = false
+var is_turned_on :bool = false
 
+func turn_on():
+	anim.play("start")
+	is_turned_on = true
 
 func _ready() -> void:
 	new_answer()
@@ -58,7 +62,5 @@ func new_answer() -> void:
 	label.text = correct_answer
 
 func win() -> void:
-	#TODO: tähä sit jotai lol
-	print("Voitit pelin!")
 # warning-ignore:return_value_discarded
 	get_tree().change_scene_to(load("res://Menu/Lose_screen.tscn"))

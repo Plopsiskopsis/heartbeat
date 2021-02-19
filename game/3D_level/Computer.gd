@@ -29,5 +29,7 @@ func action() -> void:
 		comp_started = true
 		Global.player.on_computer = true
 		$Comp_screen/Viewport/Minigame.running = true
+		if not $Comp_screen/Viewport/Minigame.is_turned_on:
+			$Comp_screen/Viewport/Minigame.turn_on()
 	else:
 		print("too far")
