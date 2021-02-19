@@ -26,7 +26,7 @@ func _process(delta) -> void:
 
 # warning-ignore:unused_argument
 func _input(event) -> void:
-	if running:
+	if running && !anim.is_playing():
 		if Input.is_action_just_pressed("ui_up"):
 			check_answer("Up")
 		if Input.is_action_just_pressed("ui_down"):
