@@ -38,7 +38,9 @@ func _physics_process(delta) -> void:
 		walk(delta)
 
 func _process(delta):
-	$Spookies.material.set_shader_param("strength", ((bpm -100.0) / 100.0) * 2.0)
+	var material_bpm = ((bpm -100.0) / 100.0) * 2.0
+	$Spookies.material.set_shader_param("strength", material_bpm)
+	$Spookies.material.set_shader_param("pump_up", material_bpm)
 	bpm -= delta
 	if bpm < 50.0 or bpm > 200.0:
 # warning-ignore:return_value_discarded
