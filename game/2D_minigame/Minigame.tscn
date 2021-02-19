@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://2D_minigame/Minigame.gd" type="Script" id=1]
+[ext_resource path="res://fonts/font.tres" type="DynamicFont" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "right"
@@ -51,6 +52,7 @@ margin_left = 471.784
 margin_top = 236.192
 margin_right = 542.784
 margin_bottom = 304.192
+custom_fonts/font = ExtResource( 2 )
 text = "a"
 align = 1
 valign = 1
@@ -64,6 +66,7 @@ margin_left = 137.303
 margin_top = 543.588
 margin_right = 904.303
 margin_bottom = 584.588
+custom_fonts/font = ExtResource( 2 )
 max_value = 90.0
 __meta__ = {
 "_edit_use_anchors_": false

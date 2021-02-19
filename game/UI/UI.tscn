@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://UI/Heart.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/UI.gd" type="Script" id=2]
 [ext_resource path="res://UI/es_render.png" type="Texture" id=3]
 [ext_resource path="res://UI/heart.png" type="Texture" id=4]
+[ext_resource path="res://fonts/font.tres" type="DynamicFont" id=5]
 
 [sub_resource type="Gradient" id=1]
 colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 0.427451 )
@@ -47,10 +48,11 @@ __meta__ = {
 position = Vector2( 980, 51.426 )
 
 [node name="Label" type="Label" parent="Heart"]
-margin_left = -50.0
+margin_left = -70.0
 margin_top = -10.0
-margin_right = -20.0
-margin_bottom = 7.99999
+margin_right = -25.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 5 )
 text = "100"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -74,6 +76,7 @@ margin_top = -60.0
 margin_right = 395.0
 margin_bottom = -46.0
 rect_scale = Vector2( 10, 10 )
+custom_fonts/font = ExtResource( 5 )
 text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
