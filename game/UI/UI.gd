@@ -5,7 +5,7 @@ func es_count(count) -> void:
 
 func heartbeat() -> void:
 	$Heart.beat()
-	$Heart/Label.text = str(Global.player.bpm) 
+	$Heart/Label.text = str(int(Global.player.bpm)) 
 
 func drink() -> void:
 	$Heart/Particles2D.emitting = true

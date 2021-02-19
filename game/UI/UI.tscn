@@ -44,13 +44,13 @@ __meta__ = {
 }
 
 [node name="Heart" parent="." instance=ExtResource( 1 )]
-position = Vector2( 923.685, 51.4256 )
+position = Vector2( 980, 51.426 )
 
 [node name="Label" type="Label" parent="Heart"]
-margin_left = 23.6465
-margin_top = -10.0104
-margin_right = 53.6465
-margin_bottom = 7.98959
+margin_left = -50.0
+margin_top = -10.0
+margin_right = -20.0
+margin_bottom = 7.99999
 text = "100"
 __meta__ = {
 "_edit_use_anchors_": false
