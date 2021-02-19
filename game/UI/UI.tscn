@@ -2,7 +2,7 @@
 
 [ext_resource path="res://UI/Heart.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/UI.gd" type="Script" id=2]
-[ext_resource path="res://UI/ui_es.png" type="Texture" id=3]
+[ext_resource path="res://UI/es_render.png" type="Texture" id=3]
 [ext_resource path="res://UI/heart.png" type="Texture" id=4]
 
 [sub_resource type="Gradient" id=1]
@@ -65,14 +65,14 @@ texture = ExtResource( 4 )
 
 [node name="ui_es" type="Sprite" parent="."]
 position = Vector2( 35.4236, 48.4809 )
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="ui_es"]
-margin_left = 66.7975
-margin_top = -59.8569
-margin_right = 106.798
-margin_bottom = -45.8569
+margin_left = 387.0
+margin_top = -60.0
+margin_right = 395.0
+margin_bottom = -46.0
 rect_scale = Vector2( 10, 10 )
 text = "0"
 __meta__ = {

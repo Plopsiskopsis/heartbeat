@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Menu/lataus.jpg" type="Texture" id=1]
-[ext_resource path="res://Menu/lataus (1).jpg" type="Texture" id=2]
+[ext_resource path="res://UI/es_render.png" type="Texture" id=1]
 [ext_resource path="res://Menu/blue_button00.png" type="Texture" id=3]
 [ext_resource path="res://Menu/Menu.gd" type="Script" id=4]
 
@@ -124,7 +123,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0627451, 0.0588235, 0.0941176, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Es_BG" type="TextureRect" parent="Background"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 1 )
@@ -133,10 +140,6 @@ stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="es_jonne" type="Sprite" parent="Background"]
-position = Vector2( 629.684, 98.7342 )
-texture = ExtResource( 2 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
