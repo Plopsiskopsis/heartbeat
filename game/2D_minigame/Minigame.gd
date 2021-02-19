@@ -60,4 +60,5 @@ func new_answer() -> void:
 func win() -> void:
 	#TODO: tähä sit jotai lol
 	print("Voitit pelin!")
+# warning-ignore:return_value_discarded
 	get_tree().change_scene_to(load("res://Menu/Lose_screen.tscn"))
