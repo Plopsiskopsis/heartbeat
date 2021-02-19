@@ -6,6 +6,9 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	spawn_es()
 
+func _input(event):
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().change_scene_to(load("res://Menu/Menu.tscn"))
 
 func spawn_es() -> void:
 	var spot :int = randi() % $House/House_ES_Spawpoints.get_child_count()
