@@ -8,6 +8,7 @@
 [ext_resource path="res://3D_level/House.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Environment" id=1]
+ambient_light_color = Color( 0.0588235, 0.0588235, 0.0941176, 1 )
 tonemap_mode = 3
 
 [node name="3D_level" type="Spatial"]

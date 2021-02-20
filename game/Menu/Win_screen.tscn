@@ -6,14 +6,14 @@
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://fonts/font.tres" type="DynamicFont" id=5]
 
-[sub_resource type="Gradient" id=5]
+[sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.451852, 0.518519 )
 colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0.294118, 1, 1, 1, 0 )
 
-[sub_resource type="GradientTexture" id=6]
-gradient = SubResource( 5 )
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
 
-[sub_resource type="ParticlesMaterial" id=7]
+[sub_resource type="ParticlesMaterial" id=3]
 emission_shape = 2
 emission_box_extents = Vector3( 512, 1, 1 )
 flag_disable_z = true
@@ -31,7 +31,7 @@ angle = 720.0
 angle_random = 1.0
 scale = 0.1
 scale_random = 0.67
-color_ramp = SubResource( 6 )
+color_ramp = SubResource( 2 )
 hue_variation = -0.32
 hue_variation_random = 1.0
 
@@ -77,7 +77,7 @@ z_index = 2
 amount = 256
 lifetime = 8.0
 visibility_rect = Rect2( 0, 0, 600, 600 )
-process_material = SubResource( 7 )
+process_material = SubResource( 3 )
 texture = ExtResource( 4 )
 __meta__ = {
 "_editor_description_": ""
@@ -86,7 +86,7 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.0352941, 0.0352941, 0.0784314, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -129,7 +129,7 @@ __meta__ = {
 [node name="TextureButton" type="TextureButton" parent="CenterContainer/VBoxContainer"]
 margin_top = 34.0
 margin_right = 190.0
-margin_bottom = 83.0002
+margin_bottom = 83.0
 texture_normal = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/TextureButton"]
