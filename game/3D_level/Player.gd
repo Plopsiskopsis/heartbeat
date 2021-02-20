@@ -18,7 +18,7 @@ const MAX_RUNNING_SPEED :float = 30.0
 const ACCEL :float = 2.0
 const DEACCEL :float = 6.0
 
-var jump_height :float = 50.0
+export var jump_height :float = 5.0
 var on_computer :bool = false
 
 func _ready() -> void:
@@ -61,7 +61,7 @@ func _input(event) -> void:
 			$UI.es_count(es_drinks)
 			$UI.drink()
 			$AnimationPlayer.play("drink")
-			bpm += 10
+			bpm += 20
 			$heart_timer.wait_time = 60.0 / bpm
 	
 	if !on_computer:
