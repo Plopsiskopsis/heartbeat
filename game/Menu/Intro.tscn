@@ -39,7 +39,7 @@ __meta__ = {
 }
 
 [node name="es_render" type="Sprite" parent="."]
-position = Vector2( 259.117, 293.458 )
+position = Vector2( 850.02, 244.321 )
 rotation = -2.98185
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
@@ -47,36 +47,28 @@ texture = ExtResource( 2 )
 [node name="Plot" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -162.0
-margin_top = 78.0
-margin_right = 373.0
-margin_bottom = 207.0
+margin_left = -486.755
+margin_top = 9.76215
+margin_right = 594.245
+margin_bottom = 237.762
 custom_fonts/font = ExtResource( 4 )
 text = "You have had a raucous weekend.
-But now  you need to do your School report
-while trying to stay awake.
-Luckily you have energy drinks around."
-align = 1
+But it seems that the school report you've been sitting on is due in a few hours!
+* You have to stay awake and finish it! *
+Luckily, your house is littered with ES™ brand energy drinks,
+* they should get you moving! *
+However, they contain a LOT of caffeine,
+* just don't drink too much... *"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Makers" type="Label" parent="."]
-margin_left = 20.0
-margin_top = 20.0
-margin_right = 196.0
-margin_bottom = 34.0
-custom_fonts/font = ExtResource( 4 )
-text = "Made by Plopsis and Maksu"
-align = 1
-valign = 1
-
 [node name="Instructions" type="Label" parent="."]
-margin_left = 20.0
-margin_top = 462.0
-margin_right = 718.0
-margin_bottom = 591.0
+margin_left = 31.3392
+margin_top = 301.748
+margin_right = 729.339
+margin_bottom = 463.748
 grow_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "WASD for moving
@@ -93,11 +85,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
+margin_left = 243.324
+margin_top = 79.5338
+margin_right = 433.324
+margin_bottom = 128.534
 texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Label" type="Label" parent="TextureButton"]
 anchor_right = 1.0
