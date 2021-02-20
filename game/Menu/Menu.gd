@@ -6,7 +6,7 @@ func _ready() -> void:
 
 func _on_Start_button_pressed() -> void:
 # warning-ignore:return_value_discarded
-	get_tree().change_scene_to(load("res://3D_level/3D_level.tscn"))
+	get_tree().change_scene_to(load("res://Menu/Intro.tscn"))
 
 
 func _on_Music_button_pressed() -> void:

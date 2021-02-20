@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="heartbeat"
-run/main_scene="res://Menu/Intro.tscn"
+run/main_scene="res://Menu/Menu.tscn"
 config/icon="res://UI/es_render.png"
 
 [autoload]
