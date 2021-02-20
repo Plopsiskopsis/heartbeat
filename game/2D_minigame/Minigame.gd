@@ -3,7 +3,7 @@ extends Node2D
 
 onready var label :Object = $VBoxContainer/Label
 onready var progress_bar :Object = $VBoxContainer/ProgressBar
-onready var arrow :Object = $VBoxContainer/Arrow
+onready var arrow :Object = $Arrow
 onready var buffer_timer :Object = $Timer
 onready var anim :Object = $AnimationPlayer
 var possible_inputs :Array = ["Up", "Left", "Down", "Right"]
