@@ -27,6 +27,15 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -7, 1, 
 [node name="es" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.08196, 2.07364, -1.66814 )
 
+[node name="es2" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5616, 0.878408, 19.9955 )
+
+[node name="es4" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29091, 2.43889, 20.6057 )
+
+[node name="es3" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3442, 0.878408, 20.558 )
+
 [node name="Comp_cam_pos" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -7, 2.3, -1.5 )
 projection = 1

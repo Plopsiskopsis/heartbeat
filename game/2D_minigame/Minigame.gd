@@ -37,6 +37,7 @@ func _input(event) -> void:
 			check_answer("Left")
 		if Input.is_action_just_pressed("ui_right"):
 			check_answer("Right")
+		Global.player.bpm -= 1
 
 
 func check_answer(input) -> void:

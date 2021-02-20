@@ -7,7 +7,7 @@ var mouse_sensitivity :float = 0.3
 var velocity :Vector3 = Vector3()
 var direction :Vector3 = Vector3()
 var gravity :float = -9.8 * 3
-var es_drinks : int = 6
+var es_drinks : int = 3
 var bpm :float = 100.0
 var bpm_offset :float = 1.0
 
