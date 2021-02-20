@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://3D_level/Computer.gd" type="Script" id=2]
 [ext_resource path="res://3D_level/Comp_screen.gd" type="Script" id=3]
 [ext_resource path="res://2D_minigame/Minigame.tscn" type="PackedScene" id=4]
+[ext_resource path="res://3D_level/objektit/keyboard.tscn" type="PackedScene" id=5]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 1 )
@@ -16,13 +17,7 @@ albedo_color = Color( 0.607843, 0.607843, 0.607843, 1 )
 
 [sub_resource type="SpatialMaterial" id=4]
 
-[sub_resource type="SpatialMaterial" id=5]
-albedo_color = Color( 0.607843, 0.607843, 0.607843, 1 )
-
-[sub_resource type="SpatialMaterial" id=6]
-albedo_color = Color( 0.607843, 0.607843, 0.607843, 1 )
-
-[sub_resource type="CylinderShape" id=7]
+[sub_resource type="CylinderShape" id=5]
 radius = 3.0
 
 [node name="Computer" type="Spatial"]
@@ -55,302 +50,19 @@ height = 1.8
 depth = 0.2
 material = SubResource( 4 )
 
-[node name="CSGBox2" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0.5 )
-height = 0.2
-depth = 3.0
-material = SubResource( 5 )
-
-[node name="Button" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.900261, -0.9, 1.9 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button2" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, -0.9, 1.9 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button3" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.9, 1.9 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button4" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, -0.9, 1.9 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button5" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, -0.9, 1.9 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button6" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.9, 1.9 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button7" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, -0.9, 1.9 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button8" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.9, 1.9 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button9" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, -0.9, 1.9 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button10" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, -0.9, 1.9 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button11" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.900261, -0.9, 1.7 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button12" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, -0.9, 1.7 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button13" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.9, 1.7 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button14" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, -0.9, 1.7 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button15" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, -0.9, 1.7 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button16" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.9, 1.7 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button17" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, -0.9, 1.7 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button18" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.9, 1.7 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button19" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, -0.9, 1.7 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button20" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, -0.9, 1.7 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button21" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.900261, -0.9, 1.5 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button22" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, -0.9, 1.5 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button23" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.9, 1.5 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button24" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, -0.9, 1.5 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button25" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, -0.9, 1.5 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button26" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.9, 1.5 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button27" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, -0.9, 1.5 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button28" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.9, 1.5 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button29" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, -0.9, 1.5 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button30" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, -0.9, 1.5 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button31" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.900261, -0.9, 1.3 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button32" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, -0.9, 1.3 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button33" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.9, 1.3 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button34" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, -0.9, 1.3 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button35" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, -0.9, 1.3 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button36" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.9, 1.3 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button37" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, -0.9, 1.3 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button38" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.9, 1.3 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button39" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, -0.9, 1.3 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
-[node name="Button40" type="CSGBox" parent="CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, -0.9, 1.3 )
-width = 0.1
-height = 0.1
-depth = 0.1
-material = SubResource( 6 )
-
 [node name="Area" type="Area" parent="." groups=[
 "action",
 ]]
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
-shape = SubResource( 7 )
+shape = SubResource( 5 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
+
+[node name="keyboard" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.981268, 1.54574 )
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
