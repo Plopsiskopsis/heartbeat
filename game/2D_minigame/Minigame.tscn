@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://2D_minigame/Minigame.gd" type="Script" id=1]
 [ext_resource path="res://fonts/font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://2D_minigame/arrow.png" type="Texture" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "right"
@@ -75,31 +76,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
-margin_left = 490.0
-margin_top = 235.248
-margin_right = 561.0
-margin_bottom = 303.248
-grow_horizontal = 2
-grow_vertical = 2
-custom_fonts/font = ExtResource( 2 )
-text = "a"
-uppercase = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ProgressBar" type="ProgressBar" parent="."]
-margin_left = 137.303
-margin_top = 543.588
-margin_right = 904.303
-margin_bottom = 584.588
-custom_fonts/font = ExtResource( 2 )
-max_value = 90.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 
@@ -113,3 +89,51 @@ visible = false
 scale = Vector2( 16, 9.4 )
 texture = ExtResource( 3 )
 centered = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 75.0
+margin_top = 80.0
+margin_right = 912.0
+margin_bottom = 552.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow" type="TextureRect" parent="VBoxContainer"]
+margin_right = 837.0
+margin_bottom = 294.0
+rect_pivot_offset = Vector2( 400, 150 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_top = 297.0
+margin_right = 837.0
+margin_bottom = 387.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 0, 90 )
+custom_fonts/font = ExtResource( 2 )
+text = "a"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+margin_top = 392.0
+margin_right = 837.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 0, 80 )
+custom_fonts/font = ExtResource( 2 )
+max_value = 90.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

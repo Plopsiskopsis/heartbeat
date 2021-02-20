@@ -1,8 +1,9 @@
 extends Node2D
 
 
-onready var label :Object = $Label
-onready var progress_bar :Object = $ProgressBar
+onready var label :Object = $VBoxContainer/Label
+onready var progress_bar :Object = $VBoxContainer/ProgressBar
+onready var arrow :Object = $VBoxContainer/Arrow
 onready var buffer_timer :Object = $Timer
 onready var anim :Object = $AnimationPlayer
 var possible_inputs :Array = ["Up", "Left", "Down", "Right"]
@@ -40,19 +41,16 @@ func _input(event) -> void:
 func check_answer(input) -> void:
 	if input == correct_answer:
 		anim.play("right")
-		answer_was_correct()
+		score += 1
+		progress_bar.value = score
+		if score >= max_score:
+			win()
+		else:
+			new_answer()
 	else:
 		anim.play("wrong")
 		score -= 1
 		progress_bar.value = score
-
-func answer_was_correct() -> void:
-	score += 1
-	progress_bar.value = score
-	if score >= max_score:
-		win()
-	else:
-		new_answer()
 
 
 func new_answer() -> void:
@@ -60,7 +58,20 @@ func new_answer() -> void:
 	possible_inputs.shuffle()
 	correct_answer = possible_inputs.front()
 	label.text = correct_answer
+	update_arrow(correct_answer)
+
+
+func update_arrow(answer):
+	if answer == "Up":
+		arrow.rect_rotation = 0.0
+	elif answer == "Down":
+		arrow.rect_rotation = 180.0
+	elif answer == "Left":
+		arrow.rect_rotation = -90.0
+	elif answer == "Right":
+		arrow.rect_rotation = 90.0
+
 
 func win() -> void:
 # warning-ignore:return_value_discarded
-	get_tree().change_scene_to(load("res://Menu/Lose_screen.tscn"))
+	get_tree().change_scene_to(load("res://Menu/Win_screen.tscn"))
