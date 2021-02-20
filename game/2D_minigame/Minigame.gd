@@ -23,6 +23,7 @@ func _ready() -> void:
 
 # warning-ignore:unused_argument
 func _process(delta) -> void:
+	arrow.rect_scale = Vector2((Global.player.bpm / 100.0), (Global.player.bpm / 100.0))
 	label.rect_scale = Vector2((Global.player.bpm / 100.0), (Global.player.bpm / 100.0))
 
 # warning-ignore:unused_argument
