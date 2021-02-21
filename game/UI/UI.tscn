@@ -46,8 +46,10 @@ __meta__ = {
 
 [node name="Heart" parent="." instance=ExtResource( 1 )]
 position = Vector2( 980, 51.426 )
+scale = Vector2( 2, 2 )
 
 [node name="Label" type="Label" parent="Heart"]
+visible = false
 margin_left = -70.0
 margin_top = -10.0
 margin_right = -25.0
