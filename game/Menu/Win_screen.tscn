@@ -127,9 +127,10 @@ __meta__ = {
 }
 
 [node name="TextureButton" type="TextureButton" parent="CenterContainer/VBoxContainer"]
-margin_top = 34.0
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 400.0
 margin_right = 190.0
-margin_bottom = 83.0
+margin_bottom = 449.0
 texture_normal = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/TextureButton"]
