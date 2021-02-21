@@ -45,8 +45,13 @@ func _process(delta):
 	$Spookies.material.set_shader_param("strength", material_bpm)
 	$Spookies.material.set_shader_param("pump_up", material_bpm)
 	bpm -= delta
-	if bpm < 50.0 or bpm > 200.0:
+	if bpm > 200.0:
 # warning-ignore:return_value_discarded
+		Global.death_reason = "Too much"
+		get_tree().change_scene_to(load("res://Menu/Lose_screen.tscn"))
+	if bpm < 50.0:
+		# warning-ignore:return_value_discarded
+		Global.death_reason = "Too little"
 		get_tree().change_scene_to(load("res://Menu/Lose_screen.tscn"))
 
 func set_cam() -> void:
