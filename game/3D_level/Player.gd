@@ -1,6 +1,9 @@
 extends KinematicBody
 
 onready var cam :Object = $head/Camera
+onready var slurp :Object = $Slurp
+onready var boing :Object = $Boing
+onready var explosion :Object = $Explosion
 var camera_angle :float = 0.0 
 var mouse_sensitivity :float = 0.3
 
@@ -61,6 +64,7 @@ func _input(event) -> void:
 			$UI.es_count(es_drinks)
 			$UI.drink()
 			$AnimationPlayer.play("drink")
+			slurp.play()
 			bpm += 20
 			$heart_timer.wait_time = 60.0 / bpm
 	
@@ -124,6 +128,11 @@ func walk(delta) -> void:
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
 			velocity.y = jump_height * bpm_offset
+			if bpm >= 120:
+				boing.play()
+				explosion.play()
+			else:
+				boing.play()
 
 
 func _on_heart_timer_timeout() -> void:

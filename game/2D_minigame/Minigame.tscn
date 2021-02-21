@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://2D_minigame/Minigame.gd" type="Script" id=1]
 [ext_resource path="res://fonts/font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 [ext_resource path="res://2D_minigame/arrow.png" type="Texture" id=4]
+[ext_resource path="res://Sound_Effects/wrong.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sound_Effects/correct.wav" type="AudioStream" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "right"
@@ -147,3 +149,9 @@ max_value = 90.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sound_Correct" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="Sound_Wrong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
