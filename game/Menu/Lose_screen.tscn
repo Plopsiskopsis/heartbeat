@@ -60,7 +60,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.001, 1, 3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 400 ), Vector2( 0, 400 ), Vector2( 0, 400 ), Vector2( 0, 30 ) ]
+"values": [ Vector2( 0, 400 ), Vector2( 0, 400 ), Vector2( 0, 400 ), Vector2( 0, 60 ) ]
 }
 
 [node name="Lose_screen" type="Control"]
@@ -128,7 +128,10 @@ __meta__ = {
 margin_top = 34.0
 margin_right = 190.0
 margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_fonts/font = ExtResource( 5 )
+text = "a"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -137,6 +140,7 @@ __meta__ = {
 margin_top = 68.0
 margin_right = 190.0
 margin_bottom = 117.0
+size_flags_horizontal = 5
 texture_normal = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/TextureButton"]
