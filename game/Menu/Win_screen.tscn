@@ -107,16 +107,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 417.0
-margin_top = 258.0
-margin_right = 607.0
-margin_bottom = 341.0
+margin_left = 57.0
+margin_top = 166.0
+margin_right = 966.0
+margin_bottom = 433.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 190.0
+margin_right = 909.0
 margin_bottom = 30.0
 custom_fonts/font = ExtResource( 5 )
 text = "You win!"
@@ -126,11 +126,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Reason_For_Dying" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 34.0
+margin_right = 909.0
+margin_bottom = 48.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 52.0
+margin_right = 909.0
+margin_bottom = 214.0
+custom_fonts/font = ExtResource( 5 )
+text = "Jonne got his assignment done and sent it on time!
+Perhaps leaving things to the last hour is not a good idea.
+The problems pile up and become too much before you know it!
+Maybe Jonne wouldn't even had to drink so much ES to reach higher places
+if he just would have built stairs for his house."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TextureButton" type="TextureButton" parent="CenterContainer/VBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_top = 400.0
-margin_right = 190.0
-margin_bottom = 449.0
+margin_left = 359.0
+margin_top = 218.0
+margin_right = 549.0
+margin_bottom = 267.0
+size_flags_horizontal = 4
 texture_normal = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/TextureButton"]
