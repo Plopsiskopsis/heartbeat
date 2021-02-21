@@ -185,12 +185,10 @@ margin_bottom = 102.0
 texture_normal = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Music_button"]
-margin_left = 63.0
-margin_top = 10.0
-margin_right = 127.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 custom_fonts/font = ExtResource( 2 )
-text = "Music On/Off"
+text = "Music toggle"
 align = 1
 valign = 1
 __meta__ = {
