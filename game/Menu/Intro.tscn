@@ -39,7 +39,7 @@ __meta__ = {
 }
 
 [node name="es_render" type="Sprite" parent="."]
-position = Vector2( 850.02, 244.321 )
+position = Vector2( 835.749, 307.349 )
 rotation = -2.98185
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
@@ -85,10 +85,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 243.324
-margin_top = 79.5338
-margin_right = 433.324
-margin_bottom = 128.534
+margin_left = -147.925
+margin_top = 197.265
+margin_right = 42.0747
+margin_bottom = 246.266
 texture_normal = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
