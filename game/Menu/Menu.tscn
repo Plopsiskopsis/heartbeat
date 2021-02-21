@@ -232,6 +232,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Wildcard" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 11.9865
+margin_top = -576.956
+margin_right = 327.986
+margin_bottom = -480.956
+custom_fonts/font = ExtResource( 2 )
+text = "Wildcard Arcade was used.
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="."]
 anchor_right = 1.0
 margin_top = 55.0

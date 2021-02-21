@@ -60,7 +60,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.001, 1, 3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 400 ), Vector2( 0, 400 ), Vector2( 0, 400 ), Vector2( 0, 34 ) ]
+"values": [ Vector2( 512, 512 ), Vector2( 512, 400 ), Vector2( 512, 400 ), Vector2( 350, 250 ) ]
 }
 
 [node name="Win_screen" type="Control"]
@@ -150,10 +150,11 @@ __meta__ = {
 }
 
 [node name="TextureButton" type="TextureButton" parent="CenterContainer/VBoxContainer"]
-margin_left = 359.0
-margin_top = 218.0
-margin_right = 549.0
-margin_bottom = 267.0
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 512.0
+margin_top = 512.0
+margin_right = 702.0
+margin_bottom = 561.0
 size_flags_horizontal = 4
 texture_normal = ExtResource( 2 )
 
@@ -169,6 +170,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "New Anim"
 "anims/New Anim" = SubResource( 4 )
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
