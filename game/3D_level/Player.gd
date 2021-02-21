@@ -4,6 +4,7 @@ onready var cam :Object = $head/Camera
 onready var slurp :Object = $Slurp
 onready var boing :Object = $Boing
 onready var explosion :Object = $Explosion
+onready var heartbeat :Object = $Heartbeat
 var camera_angle :float = 0.0 
 var mouse_sensitivity :float = 0.3
 
@@ -33,6 +34,7 @@ func _ready() -> void:
 func _physics_process(delta) -> void:
 	bpm_offset = bpm / 100.0
 	MusicPlayer.set_pitch_scale(bpm_offset)
+	heartbeat.pitch_scale = bpm_offset
 	if bpm_offset > 1.0:
 		bpm_offset *= BPM_OFFSET_MULTIPLIER
 	else:
